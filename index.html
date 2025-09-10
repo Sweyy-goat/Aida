@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aida Travel Connect</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #0f172a;
+    }
+
+    /* Navbar Glassmorphism */
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hero Parallax */
+    .parallax-bg {
+      background-image: url('https://wallpapercave.com/wp/wp9427286.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .overlay {
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.95));
+    }
+
+    /* Glow Text */
+    .glow-text {
+      background: linear-gradient(90deg, #a855f7, #6366f1, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+    }
+
+    /* Card Glass */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hover Overlay */
+    .card-overlay {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Navbar -->
+  <nav class="glass-nav fixed w-full top-0 left-0 z-50 px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold glow-text">Aida Travel</h1>
+    <div class="space-x-6 text-gray-300 hidden md:flex">
+      <a href="#home" class="hover:text-purple-400">Home</a>
+      <a href="#journeys" class="hover:text-purple-400">Journeys</a>
+      <a href="#contact" class="hover:text-purple-400">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="parallax-bg min-h-screen flex items-center justify-center relative">
+    <div class="overlay absolute inset-0"></div>
+    <div class="z-10 text-center p-6 space-y-6">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight glow-text">
+        Aida Travel Connect
+      </h1>
+      <p class="text-lg md:text-2xl text-gray-200">
+        Your journey to discovery begins now.
+      </p>
+      <a href="2nd.html">
+        <button class="mt-8 px-10 py-4 bg-gradient-to-r from-purple-600 via-indigo-500 to-cyan-400 text-white font-semibold rounded-full shadow-xl transition duration-300 transform hover:scale-110 hover:shadow-purple-500/50 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50">
+          Explore Destinations
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Journeys -->
+  <section id="journeys" class="py-24 bg-[#0f172a]">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-16 glow-text">
+        Popular Journeys
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <!-- Card 1 -->
+        <div class="glass rounded-2xl overflow-hidden shadow-2xl relative group reveal">
+          <img src="https://i0.wp.com/globetrottingsu.com/wp-content/uploads/2020/10/Sunrise-over-Taj-Mahal.jpg?resize=1020,816&ssl=1" alt="Taj Mahal" class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="p-6">
+            <h3 class="font-bold text-2xl mb-2 text-purple-300">Taj Mahal, Agra</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">City of love, romance and eternal charm.</p>
+          </div>
+          <div class="absolute inset-0 card-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center p-6">
+            <a href="#" class="px-5 py-2 bg-purple-600 hover:bg-purple-700 rounded-full text-sm shadow-md">View More</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass rounded-2xl overflow-hidden shadow-2xl relative group reveal">
+          <img src="https://hblimg.mmtcdn.com/content/hubble/img/mysore/mmt/activities/m_activities_Mysore_Mysore%20Palace_l_386_579.jpg" alt="Mysore Palace" class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="p-6">
+            <h3 class="font-bold text-2xl mb-2 text-indigo-300">Mysore Palace, Mysore</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">A royal heritage with breathtaking architecture.</p>
+          </div>
+          <div class="absolute inset-0 card-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center p-6">
+            <a href="#" class="px-5 py-2 bg-indigo-500 hover:bg-indigo-600 rounded-full text-sm shadow-md">View More</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass rounded-2xl overflow-hidden shadow-2xl relative group reveal">
+          <img src="https://t4.ftcdn.net/jpg/13/68/38/53/360_F_1368385334_nUr5dQ7bTDvdE0wOzhFFu68nYCySN2ev.jpg" alt="Gateway of India" class="w-full h-56 object-cover transform group-hover:scale-110 transition duration-500">
+          <div class="p-6">
+            <h3 class="font-bold text-2xl mb-2 text-cyan-300">Gateway of India, Mumbai</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">The spirit of modern India, vibrant and alive.</p>
+          </div>
+          <div class="absolute inset-0 card-overlay opacity-0 group-hover:opacity-100 transition duration-500 flex items-end justify-center p-6">
+            <a href="#" class="px-5 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-full text-sm shadow-md">View More</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-[#111827] text-center">
+    <h2 class="text-3xl font-bold glow-text mb-6">Get in Touch</h2>
+    <p class="text-gray-400">Plan your next journey with Aida Travel Connect</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-black/50 text-center text-gray-500 text-sm">
+    © 2025 Aida Travel Connect. All rights reserved.
+  </footer>
+
+  <!-- Scroll Reveal JS -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
